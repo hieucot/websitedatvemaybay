@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --text-color-d: #263cbd;
+  --text-color-l: #fff;
+  --bg-color: #263cbd;
+  --bg-button: linear-gradient(to left, #2d2d97, #273ec2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*======================================= Header =======================================*/
+.menu-mobile {
+  display: none;
+}
+.menu-pc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.menu-pc .logo a {
+  display: block;
+  height: 50px;
+  position: relative;
+}
+.menu-pc .logo h1 {
+  font-family: "Lobster", cursive;
+  color: var(--text-color-d);
+  font-size: 30px;
+}
+.menu-pc .logo img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 55px;
+  transition: 0s ease-in-out;
+}
+.menu-pc .logo a:hover img {
+  left: calc(100% - 55px);
+  transition: 1s ease-in-out;
+}
+.menu-pc .links ul {
+  display: flex;
+  list-style: none;
+}
+.menu-pc .links ul li {
+  margin-left: 10px;
+}
+.menu-pc .links ul li a {
+  color: var(--text-color-d);
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 20px;
+  transition: 0.2s ease-in-out;
+}
+.menu-pc .links ul li a:hover,
+.menu-pc .links ul li a.active {
+  background: var(--bg-color);
+  color: var(--text-color-l);
+}
+/*======================================= End Header =======================================*/
+
+/*======================================= Section Hero =======================================*/
+#hero {
+  background: linear-gradient(to left, #2c2b96, #263cbd);
+  position: relative;
+  z-index: 1;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/overlay.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+/*Form*/
+.booking-form {
+  padding-top: 50px;
+}
+.booking-form h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.booking-form form {
+  margin-top: 20px;
+  border: 1px solid #000;
+  padding: 20px 0;
+}
+.booking-form form > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+/*Hero content*/
+.hero-content .content {
+  text-align: right;
+  padding-top: 50px;
+}
+.hero-content .content h2 {
+  font-size: 40px;
+}
+.hero-content .content p {
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+  color: var(--text-color-d);
+}
+.hero-content .content a {
+  color: #fff;
+  background: var(--bg-button);
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.hero-content .imgBx {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  top: 25px;
+  animation: flight 15s ease-in-out forwards infinite;
+  z-index: -2;
+}
+.hero-content .imgBx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content .cloud {
+  position: relative;
+  height: 50vh;
+  top: -50vh;
+  width: 70vw;
+}
+.hero-content .cloud img:first-child,
+.hero-content .cloud img:nth-child(2),
+.hero-content .cloud img:nth-child(3),
+.hero-content .cloud img:nth-child(4),
+.hero-content .cloud img:nth-child(5),
+.hero-content .cloud img:last-child {
+  position: absolute;
+  z-index: -3;
+  animation: cloud linear infinite;
+  transform: scale(1);
+}
+.hero-content .cloud img:first-child {
+  top: 20px;
+  animation-duration: 25s;
+}
+.hero-content .cloud img:nth-child(2) {
+  top: 150px;
+  animation-duration: 30s;
+  animation-delay: -5s;
+}
+.hero-content .cloud img:nth-child(3) {
+  top: 200px;
+  animation-duration: 18s;
+  animation-delay: -10s;
+}
+.hero-content .cloud img:nth-child(4) {
+  top: 250px;
+  animation-duration: 33s;
+  animation-delay: -3s;
+}
+.hero-content .cloud img:nth-child(5) {
+  top: 300px;
+  animation-duration: 22s;
+  animation-delay: -3s;
+}
+.hero-content .cloud img:last-child {
+  top: 400px;
+  animation-duration: 25s;
+}
+/*======================================= End Section Hero =======================================*/
+
+/*==========================================================================================*/
+/*======================================= Login Page =======================================*/
+/*==========================================================================================*/
+.background-login {
+  background-image: url(/images/background-signin-out.png);
+  background-size: cover;
+  background-position: 50%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container {
+  width: 600px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+}
+.login-container .user {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: left 0.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.login-container .user.signin-box {
+  left: 0;
+  opacity: 1;
+}
+.login-container .user.signup-box {
+  left: 100%;
+  opacity: 0;
+}
+
+.login-container.active .user.signin-box {
+  left: -100%;
+  opacity: 0;
+}
+
+.login-container.active .user.signup-box {
+  left: 0%;
+  opacity: 1;
+}
+
+.login-container .user .img-box {
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+}
+.login-container .user .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.form-box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.form-box form h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 12px;
+  color: var(--text-color-l);
+}
+.form-box form input,
+.form-box form button {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #555;
+  border: none;
+  outline: none;
+  margin: 12px 0;
+  font-size: 14px;
+  border-radius: 20px;
+}
+.form-box form button {
+  max-width: 120px;
+  background: var(--bg-button);
+  color: var(--text-color-l);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.5s;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+}
+.form-box form button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skew(-10deg);
+  transition: 0s;
+}
+.form-box form button:hover::before {
+  left: 100%;
+  transition: 0.5s ease-in-out;
+}
+.form-box form > p {
+  color: var(--text-color-l);
+}
+.form-box form > p a {
+  color: #8cd3f6;
+  text-decoration: none;
+}
+.form-box form > p a:hover {
+  text-decoration: underline;
+}
+
+/* Input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*==========================================================================================*/
+/*======================================= End Login Page =======================================*/
+/*==========================================================================================*/
+
+/*==========================================================================================*/
+/*======================================= Responsive =======================================*/
+/*==========================================================================================*/
+
+@media (max-width: 768px) {
+  .login-container {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    margin: 15px;
+  }
+  .login-container .user .img-box {
+    display: none;
+  }
+  .form-box {
+    width: 100%;
+  }
+}
+
+/*==========================================================================================*/
+/*======================================= Animation =======================================*/
+/*==========================================================================================*/
+
+/* Máy bay */
+@keyframes flight {
+  0% {
+    left: -500px;
+    transform: scale(0.5);
+  }
+  60%,
+  80% {
+    left: 50px;
+    transform: scale(1);
+  }
+  100% {
+    left: 1000px;
+    transform: scale(2);
+  }
+}
+
+/* Mây bay */
+@keyframes cloud {
+  0% {
+    left: 1000px;
+  }
+  100% {
+    left: -200px;
+  }
+}

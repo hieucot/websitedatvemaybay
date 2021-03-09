@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Login</title>
+      <link rel="stylesheet" href="../styles/style.css" />
+   </head>
+
+   <body>
+      <section class="background-login">
+         <div class="login-container">
+            
+            <div class="user signin-box">
+               <div class="form-box">
+                  <form action="">
+                     <h2>Đăng nhập</h2>
+                     <input type="text" name="" placeholder="Tài khoản" />
+                     <input type="password" name="" placeholder="Mật khẩu" />
+                     <button type="submit" name="" value="Đăng nhập">Đăng nhập</button> </button>
+                     <p class="signup">
+                        Bạn chưa có tài khoản?
+                        <a href="#" onclick="toggleForm()" >Đăng ký</a>
+                     </p>
+                  </form>
+               </div>
+
+               <div class="img-box">
+                  <img src="../images/signin.png" alt="" />
+               </div>
+            </div>
+
+            <div class="user signup-box">
+               <div class="img-box">
+                  <img src="../images/signup.png" alt="" />
+               </div>
+
+               <div class="form-box">
+                  <form action="">
+                     <h2>Đăng ký</h2>
+                     <input type="text" name="" placeholder="Họ & Tên"/>
+                     <input type="email" name="" placeholder="Email"/>
+                     <input type="password" name="" placeholder="Nhập mật khẩu" />
+                     <input type="password" name="" placeholder="Nhập lại mật khẩu" />
+                     <input type="number" name="" placeholder="Số điện thoại" />
+                     <button type="submit" name="" >Đăng ký</button> </button>
+                     <p class="signin">
+                        Bạn đã có tài khoản!
+                        <a href="#" onclick="toggleForm()" >Đăng nhập</a>
+                     </p>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Script -->
+      <script type="text/javascript">
+         function toggleForm () {
+            var login = document.querySelector(".login-container");
+            login.classList.toggle("active");
+         }
+         
+      </script>
+
+
+   </body>
+</html>
